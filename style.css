@@ -1,0 +1,136 @@
+:root{
+  --accent-1:#9b59b6;
+  --accent-2:#f08fb3;
+  --muted:#6c757d;
+  --bg:#fbf7fd;
+  --card:#ffffff;
+  --glass: rgba(255,255,255,0.6);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Inter, system-ui, Arial, sans-serif; background:linear-gradient(180deg,#fff,#fbf7fd); color:#222; -webkit-font-smoothing:antialiased}
+.container-max{max-width:1100px;margin:0 auto;padding:1rem}
+
+/* NAV */
+.navbar {background: rgba(255,255,255,0.75); backdrop-filter: blur(6px); box-shadow: 0 6px 24px rgba(100,50,120,0.06)}
+.brand{font-weight:700;letter-spacing:.4px}
+.brand span{color:var(--accent-1)}
+
+/* HERO */
+.hero{padding:56px 0; background: linear-gradient(135deg,rgba(155,89,182,0.05), rgba(240,143,179,0.03)); border-bottom:1px solid #f3eaf6}
+.hero .lead{color:var(--muted)}
+.cta-primary{background:linear-gradient(90deg,var(--accent-1),var(--accent-2)); border:0}
+.cta-outline{border-color:var(--accent-1); color:var(--accent-1)}
+
+/* FEATURE CARDS */
+.feature-icon{width:56px;height:56px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;background:linear-gradient(135deg,var(--accent-1),var(--accent-2))}
+
+/* PRODUCTS */
+.card-product{border-radius:12px;overflow:hidden; transition:transform .18s ease, box-shadow .18s ease; border:0}
+.card-product:hover{transform:translateY(-6px); box-shadow:0 20px 40px rgba(251, 0, 255, 0.08)}
+.card-product img{height:190px; object-fit:cover; width:100%}
+.price{color:var(--accent-1); font-weight:700}
+
+/* GALLERY */
+.gallery-img{border-radius:8px; cursor:pointer; transition: transform .25s ease; width:100%; height:220px; object-fit:cover}
+.gallery-img:hover{transform:scale(1.04)}
+
+/* PAPER */
+.paper {background:var(--card); padding:18px; border-radius:12px; box-shadow:0 10px 30px rgba(99,66,140,0.05)}
+
+/* ORDER TABLE */
+.order-table input{width:80px}
+
+/* FOOTER */
+footer{padding:18px 0;background:#fff;border-top:1px solid #eee;color:var(--muted)}
+
+/* SMALL */
+@media(max-width:768px){
+  .hero {padding:30px 0}
+  .card-product img{height:150px}
+  .gallery-img{height:160px}
+}
+
+/* subtle animation */
+.fade-up{opacity:0; transform:translateY(8px); animation:fadeUp .6s forwards}
+@keyframes fadeUp{to{opacity:1; transform:none}}
+
+.nav-link:hover{
+  color: #9b59b6;
+  font-weight: 900;
+}
+
+/* Footer Styles */
+.footer {
+  background: #111; /* dark theme to match elegance */
+  color: #eee;
+  padding: 50px 20px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  margin-top: 50px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.footer-col h3 {
+  color: #f8c146; /* golden accent to match beauty brand */
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.footer-col p,
+.footer-col ul,
+.footer-col a {
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  color: #eee;
+  transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #f8c146;
+}
+
+.social-links a {
+  display: inline-block;
+  margin-right: 12px;
+  text-decoration: none;
+  color: #eee;
+  border: 1px solid #f8c146;
+  padding: 6px 12px;
+  border-radius: 25px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background: #f8c146;
+  color: #111;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #333;
+  padding-top: 15px;
+  font-size: 14px;
+  color: #bbb;
+}
